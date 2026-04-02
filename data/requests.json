@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1774953756885,
+    "name": "tanishka",
+    "email": "tanishka.salkuja2024@vitstudent.ac.in",
+    "role": "student",
+    "message": "full stack",
+    "status": "Approved",
+    "createdAt": "2026-03-31T10:42:36.885Z"
+  },
+  {
+    "id": 1774952127306,
+    "name": "vishal shaw",
+    "email": "vishal.shaw2024@vitstudent.ac.in",
+    "role": "student",
+    "message": "Need interview scheduling support.",
+    "status": "Rejected",
+    "createdAt": "2026-03-31T10:15:27.306Z"
+  },
+  {
+    "id": 1774951879822,
+    "name": "tanishka",
+    "email": "tan20@vitstudent.ac.in",
+    "role": "student",
+    "message": "Need guidance for frontend portfolio review.",
+    "status": "Pending",
+    "createdAt": "2026-03-31T10:11:19.822Z"
+  },
+  {
+    "id": 1774950978564,
+    "name": "Vishal Shaw",
+    "email": "djhvjvhw@gmail.com",
+    "role": "student",
+    "message": "Please share shortlist update for the applied role.",
+    "status": "Approved",
+    "createdAt": "2026-03-31T09:56:18.564Z"
+  },
+  {
+    "id": 1774950790901,
+    "name": "Vishal Shaw",
+    "email": "shawvishal431@gmail.com",
+    "role": "student",
+    "message": "Need help preparing for the frontend internship round.",
+    "status": "Pending",
+    "createdAt": "2026-03-31T09:53:10.901Z"
+  }
+]

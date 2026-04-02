@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect | Login</title>
+  <meta name="description" content="Login page for Campus Connect at VIT Vellore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="auth-layout">
+      <div class="auth-copy">
+        <p class="label">Campus Connect</p>
+        <h1>Login as Student or Admin</h1>
+        <p>
+          Start from the role-based login page. Students enter the placement portal,
+          and admins open the request dashboard.
+        </p>
+        <div class="auth-points">
+          <span>Student portal access</span>
+          <span>Admin dashboard access</span>
+          <span>Saved request management</span>
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <div class="role-switch" id="roleSwitch">
+          <button class="role-btn active" data-role="student" type="button">Student</button>
+          <button class="role-btn" data-role="admin" type="button">Admin</button>
+        </div>
+
+        <form id="studentLoginForm" class="stack" novalidate>
+          <input type="hidden" name="role" value="student">
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="email" name="email" placeholder="name@vitstudent.ac.in" required>
+          <button type="submit" class="btn">Login as Student</button>
+          <p class="helper-text">Use your `@vitstudent.ac.in` email for student login.</p>
+        </form>
+
+        <form id="adminLoginForm" class="stack hidden" novalidate>
+          <input type="hidden" name="role" value="admin">
+          <input type="text" name="username" placeholder="Admin username" required>
+          <input type="password" name="password" placeholder="Admin password" required>
+          <button type="submit" class="btn">Login as Admin</button>
+          <p class="helper-text">Demo admin login: <strong>admin</strong> / <strong>vitvellore123</strong></p>
+        </form>
+
+        <p class="form-message" id="loginMessage"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

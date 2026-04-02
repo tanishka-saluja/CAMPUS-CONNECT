@@ -1,0 +1,9 @@
+{
+  "name": "campus-connect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campus Connect full-stack prototype for VIT Vellore",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

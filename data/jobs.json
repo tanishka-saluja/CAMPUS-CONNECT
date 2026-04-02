@@ -1,0 +1,80 @@
+[
+  {
+    "id": 101,
+    "company": "ByteBridge",
+    "title": "Frontend Intern",
+    "type": "Internship",
+    "location": "Bengaluru",
+    "mode": "Hybrid",
+    "packageLabel": "45,000 INR/month",
+    "compensation": 45000,
+    "roles": ["cse"],
+    "description": "Build accessible dashboard components and improve the student-facing placement portal.",
+    "postedAt": "2026-03-20T08:00:00.000Z"
+  },
+  {
+    "id": 102,
+    "company": "NexSilicon",
+    "title": "Embedded Engineer",
+    "type": "Full Time",
+    "location": "Chennai",
+    "mode": "On-site",
+    "packageLabel": "12 LPA",
+    "compensation": 1200000,
+    "roles": ["ece"],
+    "description": "Design and test firmware modules for automotive control boards and embedded systems.",
+    "postedAt": "2026-03-18T10:30:00.000Z"
+  },
+  {
+    "id": 103,
+    "company": "SignalNest",
+    "title": "Operations Intern",
+    "type": "Internship",
+    "location": "Remote",
+    "mode": "Remote",
+    "packageLabel": "35,000 INR/month",
+    "compensation": 35000,
+    "roles": ["management"],
+    "description": "Coordinate product operations, dashboards, and recruiter onboarding workflows.",
+    "postedAt": "2026-03-24T12:15:00.000Z"
+  },
+  {
+    "id": 104,
+    "company": "CloudMint",
+    "title": "Data Engineer",
+    "type": "Full Time",
+    "location": "Hyderabad",
+    "mode": "Hybrid",
+    "packageLabel": "16 LPA",
+    "compensation": 1600000,
+    "roles": ["cse"],
+    "description": "Work on data pipelines, warehouse models, and placement analytics dashboards.",
+    "postedAt": "2026-03-26T09:45:00.000Z"
+  },
+  {
+    "id": 105,
+    "company": "VoltWave",
+    "title": "VLSI Design Intern",
+    "type": "Internship",
+    "location": "Noida",
+    "mode": "On-site",
+    "packageLabel": "40,000 INR/month",
+    "compensation": 40000,
+    "roles": ["ece"],
+    "description": "Support verification flows, digital design documentation, and testbench automation.",
+    "postedAt": "2026-03-22T07:20:00.000Z"
+  },
+  {
+    "id": 106,
+    "company": "MarketHive",
+    "title": "Strategy Analyst",
+    "type": "Full Time",
+    "location": "Mumbai",
+    "mode": "Hybrid",
+    "packageLabel": "10.5 LPA",
+    "compensation": 1050000,
+    "roles": ["management"],
+    "description": "Drive market research, client presentations, and growth strategy recommendations.",
+    "postedAt": "2026-03-17T06:10:00.000Z"
+  }
+]

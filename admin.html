@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect | Admin Dashboard</title>
+  <meta name="description" content="Admin dashboard for Campus Connect at VIT Vellore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="/admin.html" class="brand">Campus Connect <span>Admin Dashboard</span></a>
+
+    <div class="topbar-right">
+      <span class="welcome-tag" id="adminName">Placement Admin</span>
+      <button class="ghost-btn" id="adminLogoutBtn" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-hero">
+      <div>
+        <p class="label">Placement Control Room</p>
+        <h1>Manage jobs, requests, applications, and outcomes.</h1>
+        <p>
+          This dashboard gives placement coordinators a single workspace to publish roles,
+          review student submissions, and update statuses in real time.
+        </p>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="adminSummary"></section>
+    <section class="chart-grid" id="chartGrid"></section>
+
+    <section class="admin-layout">
+      <div class="admin-panel">
+        <div class="section-head">
+          <p class="label">Add Job</p>
+          <h2>Post a new opportunity</h2>
+        </div>
+
+        <form id="addJobForm" class="job-form" novalidate>
+          <div class="form-grid">
+            <input type="text" name="company" placeholder="Company name" required>
+            <input type="text" name="title" placeholder="Job title" required>
+            <select name="type" required>
+              <option value="">Job type</option>
+              <option value="Internship">Internship</option>
+              <option value="Full Time">Full Time</option>
+            </select>
+            <select name="department" required>
+              <option value="">Department</option>
+              <option value="cse">CSE</option>
+              <option value="ece">ECE</option>
+              <option value="management">Management</option>
+            </select>
+            <input type="text" name="location" placeholder="Location" required>
+            <select name="mode" required>
+              <option value="">Mode</option>
+              <option value="On-site">On-site</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Remote">Remote</option>
+            </select>
+            <input type="text" name="packageLabel" placeholder="Package label (e.g. 12 LPA)" required>
+            <input type="number" name="compensation" placeholder="Numeric compensation" min="1" required>
+          </div>
+          <textarea name="description" rows="4" placeholder="Job description" required></textarea>
+          <button type="submit" class="btn">Add Job</button>
+          <p class="form-message" id="jobFormMessage"></p>
+        </form>
+      </div>
+
+      <div class="admin-panel">
+        <div class="section-head split-head">
+          <div>
+            <p class="label">Recent Jobs</p>
+            <h2>Latest published roles</h2>
+          </div>
+          <p class="section-copy">Students see these on the live portal.</p>
+        </div>
+        <div class="jobs-board" id="adminJobsBoard"></div>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="section-head split-head">
+        <div>
+          <p class="label">Support Requests</p>
+          <h2>Search, filter, and approve or reject</h2>
+        </div>
+      </div>
+
+      <div class="table-controls">
+        <input type="search" id="requestSearch" class="search-input" placeholder="Search requests">
+        <select id="requestFilter" class="sort-select">
+          <option value="all">All statuses</option>
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+        <select id="requestSort" class="sort-select">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="status">Status</option>
+        </select>
+      </div>
+
+      <div id="requestsTableWrap"></div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="section-head split-head">
+        <div>
+          <p class="label">Applications</p>
+          <h2>Review and approve student applications</h2>
+        </div>
+      </div>
+
+      <div class="table-controls">
+        <input type="search" id="applicationSearch" class="search-input" placeholder="Search applications">
+        <select id="applicationFilter" class="sort-select">
+          <option value="all">All statuses</option>
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+        <select id="applicationSort" class="sort-select">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="status">Status</option>
+        </select>
+      </div>
+
+      <div id="applicationsTableWrap"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

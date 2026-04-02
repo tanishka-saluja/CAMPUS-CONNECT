@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect | Student Portal</title>
+  <meta name="description" content="Student portal for Campus Connect at VIT Vellore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="top">
+    <a href="#home" class="brand">Campus Connect <span>Student Portal</span></a>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">
+      Menu
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#opportunities">Jobs</a>
+      <a href="#applications">Applications</a>
+      <a href="#support">Support</a>
+    </nav>
+
+    <div class="topbar-right">
+      <div class="user-badge">
+        <span class="welcome-tag" id="studentName">Student</span>
+        <span class="user-email" id="studentEmailTag">student@vitstudent.ac.in</span>
+      </div>
+      <button class="ghost-btn" id="logoutBtn" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-hero" id="home">
+      <div class="hero-copy">
+        <p class="label">Career Workspace</p>
+        <h1>Apply faster, track smarter, and stay shortlist-ready.</h1>
+        <p class="hero-lead">
+          Discover live opportunities for VIT Vellore students, submit applications with your resume link,
+          and monitor every status update from one dashboard.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#opportunities">Explore Jobs</a>
+          <a class="ghost-btn" href="#applications">View My Applications</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="mini-card accent">
+          <p class="mini-label">Live jobs</p>
+          <h2 id="heroJobCount">0</h2>
+        </div>
+        <div class="mini-card">
+          <p class="mini-label">My applications</p>
+          <h2 id="heroApplicationCount">0</h2>
+        </div>
+        <div class="mini-card">
+          <p class="mini-label">Current focus</p>
+          <h3>Internships + Placement Prep</h3>
+          <p>Search, apply, and track without switching pages.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="opportunities">
+      <div class="section-head split-head">
+        <div>
+          <p class="label">Opportunity Board</p>
+          <h2>Search, filter, and sort live openings</h2>
+        </div>
+        <p class="section-copy" id="jobCountText">Loading jobs...</p>
+      </div>
+
+      <div class="control-bar">
+        <input type="search" id="jobSearch" class="search-input" placeholder="Search by title, company, or location">
+        <select id="jobSort" class="sort-select" aria-label="Sort jobs">
+          <option value="newest">Newest</option>
+          <option value="compensation">Highest package</option>
+          <option value="company">Company A-Z</option>
+        </select>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-role="all">All</button>
+        <button class="filter" data-role="cse">CSE</button>
+        <button class="filter" data-role="ece">ECE</button>
+        <button class="filter" data-role="management">Management</button>
+      </div>
+
+      <div class="job-grid" id="jobGrid"></div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="section-head split-head">
+        <div>
+          <p class="label">My Applications</p>
+          <h2>Track every job you applied to</h2>
+        </div>
+        <p class="section-copy">Statuses update automatically when admin reviews your profile.</p>
+      </div>
+
+      <div class="metric-row" id="applicationStats"></div>
+      <div class="application-grid" id="myApplicationsGrid"></div>
+    </section>
+
+    <section class="section support-section" id="support">
+      <div class="support-layout">
+        <div class="support-copy">
+          <p class="label">Need Help?</p>
+          <h2>Send a placement support request</h2>
+          <p>
+            Use this form for shortlisting issues, interview concerns, or document support.
+            The admin dashboard receives your request with status tracking.
+          </p>
+          <div class="support-tags">
+            <span>Shortlisting queries</span>
+            <span>Interview help</span>
+            <span>Resume support</span>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="email" name="email" placeholder="Email address" required>
+          <input type="hidden" name="role" value="student">
+          <textarea name="message" rows="5" placeholder="Describe your issue or request" required></textarea>
+          <button type="submit" class="btn">Submit Support Request</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+
+      <div class="support-history">
+        <div class="section-head split-head">
+          <div>
+            <p class="label">My Requests</p>
+            <h2>Track support messages and status</h2>
+          </div>
+          <p class="section-copy" id="requestCountText">Loading requests...</p>
+        </div>
+        <div class="request-history-grid" id="studentRequestsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Campus Connect | VIT Vellore | <span id="year"></span></p>
+    <button class="back-to-top" id="backToTopBtn" type="button">Back to top</button>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="applyModal">
+    <div class="apply-modal">
+      <div class="modal-head">
+        <div>
+          <p class="label">Apply</p>
+          <h2 id="applyJobTitle">Application Form</h2>
+        </div>
+        <button class="close-btn" id="closeModalBtn" type="button" aria-label="Close application form">Close</button>
+      </div>
+
+      <p class="section-copy" id="applyJobMeta"></p>
+
+      <form id="applyForm" class="stack" novalidate>
+        <input type="hidden" name="jobId" id="applyJobId">
+        <input type="url" name="resumeUrl" placeholder="Resume or portfolio link (https://...)" required>
+        <textarea name="note" rows="4" placeholder="Why are you a strong fit for this role?" required></textarea>
+        <button type="submit" class="btn">Submit Application</button>
+        <p class="form-message" id="applyMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
