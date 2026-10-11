@@ -1,9 +1,9 @@
 Campus Connect
 
-A lightweight web-based campus management system built using HTML, CSS, JavaScript, and Node.js (Express).
+A web-based campus management system built using HTML, CSS, JavaScript, and Node.js (Express).
 It provides basic structure for admin, student, and login modules.
 
-Features
+Features:
 Admin dashboard interface
 Student interface
 Login system (frontend-based)
@@ -11,7 +11,8 @@ Node.js Express server for routing
 Static file serving for frontend pages
 Modular JavaScript files for scalability
 
-Tech Stack
+Tech Stack:
+
 HTML5
 CSS3
 JavaScript (Vanilla JS)
@@ -38,7 +39,8 @@ CampusConnect/
 │
 └── README.md
 
-Installation & Setup
+Installation & Setup:
+
 1. Clone the repository
 git clone https://github.com/your-username/CampusConnect.git
 2. Navigate to project folder
@@ -50,7 +52,8 @@ node server.js
 5. Open in browser
 http://localhost:3000
 
-Future Improvements
+Future Improvements:
+
 Add database (MongoDB / Firebase)
 Implement real authentication (JWT / sessions)
 Role-based access control (Admin / Student)
