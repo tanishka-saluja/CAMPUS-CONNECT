@@ -57,6 +57,5 @@ Role-based access control (Admin / Student)
 Attendance & result system
 Better UI using React or TailwindCSS
 Deployment on cloud (Render / Vercel)
-👩‍💻 Author
 
-Tanishka Saluja
+
